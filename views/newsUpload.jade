@@ -1,0 +1,24 @@
+extends layout
+
+//
+block content
+    form(method='post' enctype='multipart/form-data', action='/newsUpload' id='updateForm')
+        | 目标页面
+        input(type='radio', name='textName', value='5')
+        | 应用情况
+        input(type='radio', name='textName', value='6')
+        | 获奖情况
+        input(type='radio', name='textName', value='7')
+        | 附件材料
+        input(type='radio', name='textName', value='8')
+        | 主要完成人
+        input(type='radio', name='textName', value='9')
+        | 完成单位
+        input(type='radio', name='textName', value='10')
+        | 成果鉴定
+        input(type='radio', name='textName', value='11')
+        | 媒体评价
+        textarea(name='textContent', placeholder='新闻内容输入', wrap='hard', cols='50', rows='10')
+        input(type='text', placeholder='新闻标题', name='title')
+        input(type='file', name='logo')
+        input(type='submit')

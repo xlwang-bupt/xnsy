@@ -1,0 +1,33 @@
+extends layout
+
+block content
+    form(method='post' enctype='multipart/form-data', action='/upload' id='updateForm')
+        | 目标页面
+        input(type='radio', name='textName', value='index')
+        | 首页
+        input(type='radio', name='textName', value='1')
+        | 申报书
+        input(type='radio', name='textName', value='2')
+        | 成果简介
+        input(type='radio', name='textName', value='3')
+        | 科学总结
+        input(type='radio', name='textName', value='4')
+        | 创新点
+        input(type='radio', name='textName', value='5')
+        | 应用情况
+        input(type='radio', name='textName', value='6')
+        | 获奖情况
+        input(type='radio', name='textName', value='7')
+        | 附件材料
+        input(type='radio', name='textName', value='8')
+        | 主要完成人
+        input(type='radio', name='textName', value='9')
+        | 完成单位
+        input(type='radio', name='textName', value='10')
+        | 成果鉴定
+        input(type='radio', name='textName', value='11')
+        | 媒体评价
+        input(type='file', name='logo')
+        textarea(name='textContent', placeholder='新闻内容输入', wrap='hard', cols='50', rows='10')
+        input(type='text', placeholder='新闻标题', name='title')
+        input(type='submit')

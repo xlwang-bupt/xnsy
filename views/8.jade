@@ -1,0 +1,67 @@
+extends layout
+
+block content
+  div.head_all
+    div.head
+    table(border='0', align='center', cellpadding='0', cellspacing='0')
+      tr
+        td
+          div.menu
+            ul
+              li
+                a(class='hide', href='/') 首页
+              li
+                a(class='hide', href='/1') 申报书
+              li
+                a(class='hide', href='/2') 成果简介
+              li
+                a(class='hide', href='/3') 科学总结
+              li
+                a(class='hide', href='/4') 创新点
+              li
+                a(class='hide', href='/5') 应用情况
+              li
+                a(class='hide', href='/6') 获奖情况
+              li
+                a(class='hide', href='/7') 附件材料
+              li
+                a(class='hide', href='/8') 主要完成人
+              li
+                a(class='hide', href='/9') 完成单位
+              li
+                a(class='hide', href='/10') 成果鉴定
+              li
+                a(class='hide', href='/11') 媒体评价
+            div.clear
+  div.main_all
+    div.two_page
+      table(width="1000", border="0", cellpadding="0", cellspacing="0")
+        tr
+          td(idth="221", valign="top")
+            div.two_left
+              img(src="images/left.png", style="width: 170px; height: 190px; margin-top: 300px;")
+          td(valign="top")
+            div.two_right
+              div.two_right_title
+                div.two_right_title_h1 主要完成人
+                div.two_img
+                  img(src="images/titleb.jpg")
+                div.two_news_list
+                  table(width="98%", border="0", align="left", cellpadding="0", cellspacing="0")
+                    each title in newsTitles
+                      tr
+                        td(width="20")
+                          a(href="/news?title=" + title)
+                          img(src="images/title.png", width="4", height="6")
+                          a(href="/news?title=" + title)
+                        td(align="left", class="index_table_size")
+                          a(href="/news?title=" + title) #{title}
+                        td(width="24", align="center", class="public_color1")
+                div.page
+                  a(href='?page=#{forwardPage}') 上一页
+                  each pageNumber in pagesNumberAll
+                    a(href='?page=#{pageNumber - 1}') #{pageNumber}
+                  a(href='?page=#{nextPage}') 下一页
+  div.foot_mat
+    div.foot
+      div.foot_right 学院地址：四川省成都市新都区新都大道8号 联系方式:028-83032151 <br /> 西南石油大学 体育学院 版权所有 Copyright(C)1996-2015

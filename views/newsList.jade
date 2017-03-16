@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h1 删除新闻列表
+    form(method='get' enctype='multipart/form-data', action='/newsList' id='updateForm')
+        each newsTitle in newsTitles
+            input(type='radio', name='title', value=newsTitle)
+            span #{newsTitle}
+        input(type='submit')

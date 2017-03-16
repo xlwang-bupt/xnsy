@@ -1,0 +1,46 @@
+extends layout
+
+block content
+  div.head_all
+    div.head
+    table(border='0', align='center', cellpadding='0', cellspacing='0')
+      tr
+        td
+          div.menu
+            ul
+              li
+                a(class='hide', href='/') 首页
+              li
+                a(class='hide', href='/1') 申报书
+              li
+                a(class='hide', href='/2') 成果简介
+              li
+                a(class='hide', href='/3') 科学总结
+              li
+                a(class='hide', href='/4') 创新点
+              li
+                a(class='hide', href='/5') 应用情况
+              li
+                a(class='hide', href='/6') 获奖情况
+              li
+                a(class='hide', href='/7') 附件材料
+              li
+                a(class='hide', href='/8') 主要完成人
+              li
+                a(class='hide', href='/9') 完成单位
+              li
+                a(class='hide', href='/10') 成果鉴定
+              li
+                a(class='hide', href='/11') 媒体评价
+            div.clear
+  div.main_all
+    div.detail
+      div.detail_title
+        img(src='/images/next_ico.png', width='2', height='10')
+      div.detail_h1 #{title}
+      div.detail_text
+        | !{indexContent}
+        img(src='/news/pics/' + title + 'Pic', width='1080px', height='auto')
+  div.foot_mat
+    div.foot
+      div.foot_right 学院地址：四川省成都市新都区新都大道8号 联系方式:028-83032151 <br /> 西南石油大学 体育学院 版权所有 Copyright(C)1996-2015
